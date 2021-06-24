@@ -1,0 +1,135 @@
+/* 6.6 Forms
+----------------------------------------------------------*/
+
+/* Form Group */
+
+.form-group {
+  margin-bottom: 0.5rem;
+
+  label,
+  legend {
+    font-weight: 500;
+  }
+}
+
+/* Input Group */
+
+.input-group {
+  .btn {
+    &:not(:disabled):not(.disabled) {
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group {
+  margin-left: -2px;
+}
+
+/* Form Control */
+
+.form-control {
+  background-color: transparent;
+  appearance: none;
+  border-color: $color-line;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border: 2px solid $color-line;
+  box-shadow: none;
+  border-radius: 0;
+  height: calc(3.25rem + 4px);
+  background-clip: border-box;
+  color: inherit;
+
+  @include input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+    color: inherit;
+  }
+
+  &.error {
+    border-color: tint($color-red, 70%);
+    background-color: tint($color-red, 98%);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: inherit;
+    opacity: 0.5;
+    background-color: $color-line;
+    cursor: not-allowed;
+  }
+
+  &.is-valid {
+    border-color: $color-green;
+    background-size: calc(0.5em + 0.375rem) calc(0.5em + 0.275rem);
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($color-green, 0.2);
+    }
+  }
+
+  &.is-invalid {
+    border-color: $color-red;
+    background-size: calc(0.5em + 0.375rem) calc(0.5em + 0.275rem);
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($color-red, 0.2);
+    }
+  }
+
+  &.input-qty {
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.form-control-sm {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.form-control-lg {
+  padding: 1.625rem;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+
+.dark .form-control {
+  border-color: rgba(white, 0.1);
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+/* Label */
+
+label {
+  font-weight: 500;
+}
+
+/* Custom Controls */
+
+.custom-control {
+  min-height: 1.5em;
+  padding-left: 1.9em;
+  margin-right: 1em;
+
+  label {
+    font-weight: 400;
+  }
+}

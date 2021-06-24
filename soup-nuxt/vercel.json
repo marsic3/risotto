@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {}
+    },
+    {
+      "src": "docs/.vuepress/config.js",
+      "use": "now-static-build-vuepress-docgen",
+      "config": {}
+    }
+  ]
+}

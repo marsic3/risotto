@@ -1,0 +1,100 @@
+/* 6.5 Carousel
+----------------------------------------------------------*/
+
+.VueCarousel-dot {
+  opacity: 0.5;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.carousel {
+  .VueCarousel-slide {
+    backface-visibility: none;
+  }
+
+  .VueCarousel-dot-container {
+    .VueCarousel-dot {
+      color: $color-global;
+      opacity: 0.35;
+
+      &--active {
+        opacity: 1;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+
+  .VueCarousel-navigation {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    z-index: 10;
+
+    .VueCarousel-navigation-button {
+      @include transition-primary;
+      opacity: 0.5;
+      transform: translateY(-50%) !important;
+
+      &:not(.VueCarousel-navigation--disabled):hover {
+        opacity: 1;
+      }
+
+      &::before {
+        @include transition-primary;
+        font-family: 'themify-icons';
+        font-size: 1.7rem;
+        line-height: 1;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+
+      &.VueCarousel-navigation--disabled {
+        opacity: 0.2;
+        cursor: initial;
+      }
+    }
+
+    .VueCarousel-navigation-prev {
+      margin-left: 10px !important;
+
+      &::before {
+        content: '\e629';
+      }
+    }
+
+    .VueCarousel-navigation-next {
+      margin-right: 10px !important;
+
+      &::before {
+        content: '\e628';
+      }
+    }
+  }
+
+  &.inner-controls {
+    .VueCarousel-dot-container {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 15px 0;
+      z-index: 5;
+    }
+
+    .VueCarousel-navigation {
+      .VueCarousel-navigation-button {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* 6.1 Alerts
+----------------------------------------------------------*/
+
+.alert {
+  border: 0;
+  font-weight: 400;
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+}
+
+$k: 1;
+@each $type, $color in $color-variants-base {
+  &.alert-#{$type} {
+    background-color: rgba($color, 0.1);
+
+    .dark & {
+      color: white;
+    }
+
+    .close {
+      box-shadow: 1px 1px 20px 0 rgba(black, 0.07);
+      background-color: white;
+      color: $color;
+
+      &:hover,
+      &:focus {
+        background-color: $color;
+        color: white;
+      }
+    }
+  }
+}

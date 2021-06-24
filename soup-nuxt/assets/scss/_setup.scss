@@ -1,0 +1,135 @@
+/* ----------------------------------------------------------------------------- */
+/* --- 1. SETUP
+/* ----------------------------------------------------------------------------- */
+
+html {
+  font-size: 14px;
+
+  @include media('<=xs') {
+    font-size: 13px;
+  }
+}
+
+body {
+  position: relative;
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-body;
+  color: $color-global;
+
+  &.body-padded {
+    @include media('<=lg') {
+      margin: 0;
+    }
+
+    @include media('>lg') {
+      margin: 0 30px 30px;
+    }
+  }
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+a {
+  color: $color-primary;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+textarea:focus,
+input:focus,
+a:focus,
+a:visited,
+*:focus {
+  outline: none;
+}
+
+iframe {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+
+.container,
+.container-fluid {
+}
+
+.container {
+  > .main,
+  > .sidebar {
+    &.left {
+      float: left;
+
+      @include media('<=sm') {
+        float: none;
+      }
+    }
+
+    &.right {
+      float: right;
+
+      @include media('<=sm') {
+        float: none;
+      }
+    }
+  }
+
+  > .main {
+    width: 70%;
+
+    @include media('<=sm') {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  > .sidebar {
+    width: 24%;
+
+    @include media('<=sm') {
+      width: 100%;
+    }
+  }
+}
+
+.container-md {
+  width: 860px;
+
+  @include media('<=sm') {
+    width: 730px;
+  }
+  @include media('<=xs') {
+    width: auto;
+  }
+}
+
+::selection {
+  background: $color-primary;
+  color: white;
+}
+
+*::-moz-selection {
+  background: $color-primary;
+  color: white;
+}
+
+.__nuxt-error-page {
+  position: relative;
+  padding: 10vh 0;
+}

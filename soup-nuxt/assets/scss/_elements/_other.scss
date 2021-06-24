@@ -1,0 +1,106 @@
+/* 6.12 Other
+----------------------------------------------------------*/
+
+/* Separator */
+
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-color: $color-line;
+
+  @include media('<=sm') {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &.hr-md {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &.hr-sm {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &.hr-primary {
+    border-width: 2px;
+    border-color: $color-primary;
+  }
+}
+
+.dark hr {
+  border-color: $color-line-light;
+}
+
+/* Shapes */
+
+.shape {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.square {
+    border-radius: 5px;
+  }
+}
+
+/* Close */
+
+.close {
+  @include transition-primary;
+  color: inherit;
+  text-shadow: none;
+  opacity: 0.6;
+  font-size: 0;
+
+  &:before {
+    font-size: 1rem;
+    content: '\e646';
+    font-family: 'themify-icons';
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus:active {
+    outline: none;
+    color: inherit;
+    opacity: 1;
+  }
+}
+
+.inverted .close {
+  color: white;
+}
+
+/* Stick to content */
+
+.stick-to-content {
+  @include media('<=md') {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
+/* Images */
+
+.img-thumbnail,
+.rounded {
+  border-radius: 0.75rem;
+}
+
+/* Actions link */
+
+.action-icon {
+  color: $color-muted;
+  margin: 0 0.1em;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

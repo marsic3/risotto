@@ -1,0 +1,79 @@
+/* 6.9 Modals
+----------------------------------------------------------*/
+
+.modal {
+  // display: block !important;
+  // opacity: 1;
+  @include theme-default;
+  color: $color-dark;
+}
+
+.modal.fade .modal-dialog {
+  transform: scale(0.9);
+  // opacity: 1;
+  // transform: scale(1);
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+.modal-content {
+  border-radius: 0;
+  box-shadow: 5px 5px 50px 0 rgba(0, 0, 0, 0.3);
+  border: 0;
+  overflow: hidden;
+}
+
+.modal-header {
+  position: relative;
+  padding: 2rem;
+  border-radius: 0;
+
+  &.modal-header-lg {
+    padding: 7rem 2rem 1.5rem;
+  }
+
+  > .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+  }
+}
+
+.modal {
+  > .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.modal-btn {
+  &:hover,
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+.modal-product-details {
+  background-color: $color-light;
+  padding: 1.5rem 2rem;
+}
+
+.modal-body {
+  padding: 1.5rem 2rem;
+}
+
+.modal-footer {
+  padding: 1.5rem 2rem;
+}
+
+.modal-backdrop {
+  background-color: $color-dark;
+
+  &.show {
+    opacity: 0.4;
+  }
+}

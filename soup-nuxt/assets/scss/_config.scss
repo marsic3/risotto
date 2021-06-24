@@ -1,0 +1,279 @@
+// SASS Configuration File
+
+@import '../../node_modules/include-media/dist/include-media';
+
+// Fonts
+// -----------------------------------------
+
+$font-primary: 'Helvetica Neue', 'Raleway', sans-serif !default;
+$font-secondary: 'Oswald', sans-serif !default;
+
+// Colors
+// -----------------------------------------
+
+@mixin theme-default {
+  --color-secondary: #212224;
+  --color-body: white;
+  --color-light: #f3f4f4;
+  --color-inverted: white;
+  --color-dark: #212224;
+  --color-extra-dark: #1b1c1d;
+  --color-global: #212224;
+  --color-line: #efefef;
+  --color-line-inverted: rgba(255, 255, 255, 0.15);
+  --color-muted: #9c9c9c;
+  --color-muted-inverted: rgba(255, 255, 255, 0.45);
+}
+
+@mixin theme-inverted {
+  --color-secondary: white;
+  --color-body: #212224;
+  --color-light: #28292c;
+  --color-inverted: #212224;
+  --color-dark: #1b1c1d;
+  --color-extra-dark: #18191a;
+  --color-global: white;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-inverted: rgba(0, 0, 0, 0.15);
+  --color-muted: rgba(255, 255, 255, 0.45);
+  --color-muted-inverted: rgba(0, 0, 0, 0.45);
+}
+
+:root {
+  &[data-theme-inverted='false'] {
+    @include theme-default;
+  }
+
+  &[data-theme-inverted='true'] {
+    @include theme-inverted;
+  }
+}
+
+$color-primary: var(--color-primary);
+$color-primary-light: var(--color-primary-light);
+$color-primary-dark: var(--color-primary-dark);
+$color-secondary: var(--color-secondary);
+$color-light: var(--color-light);
+$color-dark: var(--color-dark);
+$color-extra-dark: var(--color-extra-dark);
+$color-inverted: var(--color-inverted);
+
+$color-body: var(--color-body);
+$color-global: var(--color-global);
+$color-muted: var(--color-muted);
+$color-muted-inverted: var(--color-muted-inverted);
+
+$color-line: var(--color-line);
+$color-line-inverted: var(--color-line-inverted);
+$color-line-dark: #efefef;
+$color-line-light: rgba(255, 255, 255, 0.1);
+
+// Colors - Variants
+$color-red: #e15757;
+$color-blue: #56aee5;
+$color-orange: #ec9744;
+$color-red: #e15757;
+$color-green: #4aa36b;
+$color-gold: #ebd072;
+$color-medium: #bbc4c6;
+
+// Colors - Social
+$color-facebook: #213553;
+$color-twitter: #3aa8db;
+$color-google: #d04f3e;
+$color-behance: #1882ff;
+$color-dribbble: #e95aae;
+$color-flickr: #f9429c;
+$color-instagram: #4f86ac;
+$color-linkedin: #008bc2;
+$color-pinterest: #cb1f24;
+$color-skype: #00bef4;
+$color-slack: #44ba97;
+$color-tumblr: #435971;
+$color-vimeo: #0bc4ef;
+$color-vine: #00be9b;
+$color-youtube: #ed4533;
+
+$header-height: 100px;
+$header-mobile-height: 60px;
+
+// Media Queries
+// -----------------------------------------
+
+$breakpoints: (
+  xl: 1500px,
+  lg: 1199px,
+  md: 991px,
+  sm: 767px,
+  xs: 575px
+);
+// Arrays
+// -----------------------------------------
+
+$social-brands: (
+  'facebook': $color-facebook,
+  'twitter': $color-twitter,
+  'google': $color-google,
+  'behance': $color-behance,
+  'dribbble': $color-dribbble,
+  'flickr': $color-flickr,
+  'instagram': $color-instagram,
+  'linkedin': $color-linkedin,
+  'pinterest': $color-pinterest,
+  'skype': $color-skype,
+  'slack': $color-slack,
+  'tumblr': $color-tumblr,
+  'vimeo': $color-vimeo,
+  'vine': $color-vine,
+  'youtube': $color-youtube
+);
+
+$color-variants: (
+  'primary': $color-primary,
+  'primary-light': $color-primary-light,
+  'primary-dark': $color-primary-dark,
+  'secondary': $color-secondary,
+  'info': $color-blue,
+  'warning': $color-orange,
+  'danger': $color-red,
+  'success': $color-green,
+  'dark': $color-dark
+);
+
+$color-variants-base: (
+  'info': $color-blue,
+  'warning': $color-orange,
+  'danger': $color-red,
+  'success': $color-green
+);
+
+// Mixins
+// -----------------------------------------
+
+@mixin fullheight {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+@mixin fill-parent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  content: ' ';
+}
+
+@mixin link-inherit {
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+}
+
+@mixin transition-primary($property: all) {
+  transition-property: $property;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+@mixin transition-secondary($property: all) {
+  transition-property: $property;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@mixin reset($type: null) {
+  @if $type == spacing {
+    margin: 0;
+    padding: 0;
+  }
+  @if $type == list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @if $type == button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: inherit;
+    padding: 0;
+    text-align: initial;
+  }
+  @if $type == everything {
+    float: none;
+    position: static;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    list-style: none;
+  }
+}
+
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  ::-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@mixin section-hero {
+  height: calc(100vh - #{$header-height});
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  @include media('<=lg') {
+    height: auto;
+  }
+
+  @include media('>lg') {
+    .body-padded & {
+      height: calc(100vh - #{$header-height} - 30px);
+    }
+  }
+
+  .header-absolute & {
+    @include media('>lg') {
+      @include fullheight;
+    }
+  }
+
+  .body-padded .header-absolute & {
+    @include media('>lg') {
+      height: calc(100vh - 30px);
+    }
+  }
+}

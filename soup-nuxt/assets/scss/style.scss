@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+/* -----------------------------------------------------------------------------
+
+Soup - NuxtJS Restaurant with Online Ordering System Template
+
+File:			      Base SCSS File (Classic)
+Version:        1.00
+Last change:    05/08/2020
+Author:			    Suelo
+
+-------------------------------------------------------------------------------- */
+
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway:100,200,400,500');
+
+// Import Config
+@import 'config';
+
+// Import Styles
+@import 'setup';
+@import 'basics';
+@import 'content';
+@import 'elements';
+@import 'widgets';
+@import 'transitions';

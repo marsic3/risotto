@@ -1,0 +1,58 @@
+/* 4.1 Blog
+----------------------------------------------------------*/
+
+.comments {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    margin-bottom: 0.5rem;
+
+    .avatar {
+      width: 58px;
+      height: 58px;
+      float: left;
+
+      @include media('<=xs') {
+        width: 28px;
+        height: 28px;
+      }
+
+      > img {
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+
+        @include media('<=xs') {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .content {
+      padding: 10px 0;
+      margin-left: 78px;
+
+      @include media('<=xs') {
+        padding-top: 0;
+        margin-left: 38px;
+      }
+
+      > .details {
+        font-size: 0.9rem;
+        color: $color-muted;
+      }
+    }
+
+    ul {
+      padding-left: 58px;
+      list-style: none;
+
+      @include media('<=xs') {
+        padding-left: 30px;
+      }
+    }
+  }
+}

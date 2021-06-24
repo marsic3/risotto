@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API | Soup - NuxtJS - Documentation</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href=./assets/css/0.styles.42bc01db.css as="style"><link rel="preload" href=./assets/js/app.7351abcf.js as="script"><link rel="preload" href=./assets/js/41.39bc712c.js as="script"><link rel="preload" href=./assets/js/82.4a6b2af2.js as="script"><link rel="prefetch" href=./assets/js/1.f1c14e9d.js><link rel="prefetch" href=./assets/js/10.f19cc5ca.js><link rel="prefetch" href=./assets/js/100.548c36ea.js><link rel="prefetch" href=./assets/js/101.9890c900.js><link rel="prefetch" href=./assets/js/102.aa8bad75.js><link rel="prefetch" href=./assets/js/103.000d02b2.js><link rel="prefetch" href=./assets/js/104.e82d326c.js><link rel="prefetch" href=./assets/js/105.3fcc9e40.js><link rel="prefetch" href=./assets/js/106.ab5dbe77.js><link rel="prefetch" href=./assets/js/107.9f6dcd98.js><link rel="prefetch" href=./assets/js/108.5d1b597b.js><link rel="prefetch" href=./assets/js/109.cca4856d.js><link rel="prefetch" href=./assets/js/11.9addf31d.js><link rel="prefetch" href=./assets/js/110.09d51aca.js><link rel="prefetch" href=./assets/js/111.8c2d8201.js><link rel="prefetch" href=./assets/js/112.96ee4e3e.js><link rel="prefetch" href=./assets/js/113.32fc1998.js><link rel="prefetch" href=./assets/js/114.ac27f503.js><link rel="prefetch" href=./assets/js/115.0e59fc25.js><link rel="prefetch" href=./assets/js/116.ef0ba983.js><link rel="prefetch" href=./assets/js/117.2d3ce1ef.js><link rel="prefetch" href=./assets/js/118.69c5293a.js><link rel="prefetch" href=./assets/js/119.5f5dffcc.js><link rel="prefetch" href=./assets/js/12.6b8362d4.js><link rel="prefetch" href=./assets/js/120.5a0258d4.js><link rel="prefetch" href=./assets/js/121.f21b3581.js><link rel="prefetch" href=./assets/js/122.015a46b7.js><link rel="prefetch" href=./assets/js/123.e0c72a86.js><link rel="prefetch" href=./assets/js/124.ed365ec1.js><link rel="prefetch" href=./assets/js/125.29fa081d.js><link rel="prefetch" href=./assets/js/126.99a8e4d4.js><link rel="prefetch" href=./assets/js/127.d558b1db.js><link rel="prefetch" href=./assets/js/128.564edcd4.js><link rel="prefetch" href=./assets/js/129.071bb1c2.js><link rel="prefetch" href=./assets/js/13.276a558d.js><link rel="prefetch" href=./assets/js/130.0ca88b49.js><link rel="prefetch" href=./assets/js/131.5b7892ff.js><link rel="prefetch" href=./assets/js/132.9af6efa6.js><link rel="prefetch" href=./assets/js/133.ff60c175.js><link rel="prefetch" href=./assets/js/134.cac0371c.js><link rel="prefetch" href=./assets/js/135.b75cebec.js><link rel="prefetch" href=./assets/js/136.cefaeb7a.js><link rel="prefetch" href=./assets/js/137.5588f53c.js><link rel="prefetch" href=./assets/js/138.eec3eec5.js><link rel="prefetch" href=./assets/js/139.e4253c74.js><link rel="prefetch" href=./assets/js/14.c5cc006b.js><link rel="prefetch" href=./assets/js/140.5106d521.js><link rel="prefetch" href=./assets/js/141.0ce16b3e.js><link rel="prefetch" href=./assets/js/142.9dcb5e0f.js><link rel="prefetch" href=./assets/js/143.6decb321.js><link rel="prefetch" href=./assets/js/144.ef22830e.js><link rel="prefetch" href=./assets/js/15.310c1c2a.js><link rel="prefetch" href=./assets/js/16.fdfd7aec.js><link rel="prefetch" href=./assets/js/17.12ccb468.js><link rel="prefetch" href=./assets/js/18.82f66603.js><link rel="prefetch" href=./assets/js/19.0a9f472a.js><link rel="prefetch" href=./assets/js/2.e4c9a6b0.js><link rel="prefetch" href=./assets/js/20.d492741b.js><link rel="prefetch" href=./assets/js/21.19326d71.js><link rel="prefetch" href=./assets/js/22.00e7e6f1.js><link rel="prefetch" href=./assets/js/23.55561948.js><link rel="prefetch" href=./assets/js/24.5b44a62e.js><link rel="prefetch" href=./assets/js/25.941898fc.js><link rel="prefetch" href=./assets/js/26.39717be9.js><link rel="prefetch" href=./assets/js/27.34172c15.js><link rel="prefetch" href=./assets/js/28.78d12d18.js><link rel="prefetch" href=./assets/js/29.559f1111.js><link rel="prefetch" href=./assets/js/3.c969a8b6.js><link rel="prefetch" href=./assets/js/30.d52e3b22.js><link rel="prefetch" href=./assets/js/31.abfdc626.js><link rel="prefetch" href=./assets/js/32.7ce67c36.js><link rel="prefetch" href=./assets/js/33.563b3501.js><link rel="prefetch" href=./assets/js/34.1846d871.js><link rel="prefetch" href=./assets/js/35.8120882a.js><link rel="prefetch" href=./assets/js/36.366bb0ad.js><link rel="prefetch" href=./assets/js/37.494d06d3.js><link rel="prefetch" href=./assets/js/38.c6ac700b.js><link rel="prefetch" href=./assets/js/39.494e982a.js><link rel="prefetch" href=./assets/js/4.a2e5fc46.js><link rel="prefetch" href=./assets/js/42.2a5e8d11.js><link rel="prefetch" href=./assets/js/43.0be6fb14.js><link rel="prefetch" href=./assets/js/44.a2664439.js><link rel="prefetch" href=./assets/js/45.0865de93.js><link rel="prefetch" href=./assets/js/46.c02c32e6.js><link rel="prefetch" href=./assets/js/47.07856b0d.js><link rel="prefetch" href=./assets/js/48.f2ec36a9.js><link rel="prefetch" href=./assets/js/49.13e11450.js><link rel="prefetch" href=./assets/js/5.328afaad.js><link rel="prefetch" href=./assets/js/50.687b800a.js><link rel="prefetch" href=./assets/js/51.301ffe4d.js><link rel="prefetch" href=./assets/js/52.63ddd2db.js><link rel="prefetch" href=./assets/js/53.6490be77.js><link rel="prefetch" href=./assets/js/54.3fe6f11a.js><link rel="prefetch" href=./assets/js/55.719ab6a1.js><link rel="prefetch" href=./assets/js/56.dfd07222.js><link rel="prefetch" href=./assets/js/57.f5f8cf8e.js><link rel="prefetch" href=./assets/js/58.b1f02df4.js><link rel="prefetch" href=./assets/js/59.af4d4e53.js><link rel="prefetch" href=./assets/js/6.8120b434.js><link rel="prefetch" href=./assets/js/60.293265d6.js><link rel="prefetch" href=./assets/js/61.152ffe8c.js><link rel="prefetch" href=./assets/js/62.10fd66c7.js><link rel="prefetch" href=./assets/js/63.b0f6b86b.js><link rel="prefetch" href=./assets/js/64.e47dfa5c.js><link rel="prefetch" href=./assets/js/65.63c91050.js><link rel="prefetch" href=./assets/js/66.a725e1c7.js><link rel="prefetch" href=./assets/js/67.5c8b90c5.js><link rel="prefetch" href=./assets/js/68.33eacf7d.js><link rel="prefetch" href=./assets/js/69.1d282390.js><link rel="prefetch" href=./assets/js/7.00b290b5.js><link rel="prefetch" href=./assets/js/70.0311026c.js><link rel="prefetch" href=./assets/js/71.ee77e5ba.js><link rel="prefetch" href=./assets/js/72.bb7efbd7.js><link rel="prefetch" href=./assets/js/73.a9c788f0.js><link rel="prefetch" href=./assets/js/74.80fe37fe.js><link rel="prefetch" href=./assets/js/75.2f60d826.js><link rel="prefetch" href=./assets/js/76.55086c98.js><link rel="prefetch" href=./assets/js/77.8b63d777.js><link rel="prefetch" href=./assets/js/78.73444390.js><link rel="prefetch" href=./assets/js/79.8a7f5bc8.js><link rel="prefetch" href=./assets/js/8.ca89685a.js><link rel="prefetch" href=./assets/js/80.18f50cd8.js><link rel="prefetch" href=./assets/js/81.f9720eff.js><link rel="prefetch" href=./assets/js/83.d41d81b6.js><link rel="prefetch" href=./assets/js/84.033e96f9.js><link rel="prefetch" href=./assets/js/85.96f0074c.js><link rel="prefetch" href=./assets/js/86.1bb8e778.js><link rel="prefetch" href=./assets/js/87.a0e3cd6a.js><link rel="prefetch" href=./assets/js/88.0109c18a.js><link rel="prefetch" href=./assets/js/89.593d1129.js><link rel="prefetch" href=./assets/js/9.67349224.js><link rel="prefetch" href=./assets/js/90.6f018ca5.js><link rel="prefetch" href=./assets/js/91.ce7e421b.js><link rel="prefetch" href=./assets/js/92.dc7ee1d1.js><link rel="prefetch" href=./assets/js/93.1ebeca6a.js><link rel="prefetch" href=./assets/js/94.f25aa72e.js><link rel="prefetch" href=./assets/js/95.a4e8c43d.js><link rel="prefetch" href=./assets/js/96.c97c09d9.js><link rel="prefetch" href=./assets/js/97.a0d29be4.js><link rel="prefetch" href=./assets/js/98.59d8b843.js><link rel="prefetch" href=./assets/js/99.34287c3e.js>
+    <link rel="stylesheet" href=./assets/css/0.styles.42bc01db.css>
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="./index.html" class="home-link router-link-active"><!----> <span class="site-name">Soup - NuxtJS - Documentation</span></a> <div class="links"><!----> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="./development.html" class="sidebar-link">Development</a></li><li><a href="./configuration.html" class="sidebar-link">Configuration</a></li><li><a href="./api.html" aria-current="page" class="active sidebar-link">API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="./api.html#settings" class="sidebar-link">Settings</a></li><li class="sidebar-sub-header"><a href="./api.html#theme" class="sidebar-link">Theme</a></li><li class="sidebar-sub-header"><a href="./api.html#menu" class="sidebar-link">Menu</a></li><li class="sidebar-sub-header"><a href="./api.html#checkout" class="sidebar-link">Checkout</a></li><li class="sidebar-sub-header"><a href="./api.html#pages" class="sidebar-link">Pages</a></li><li class="sidebar-sub-header"><a href="./api.html#blog" class="sidebar-link">Blog</a></li></ul></li><li><a href="./data-models.html" class="sidebar-link">Data Models</a></li><li><section class="sidebar-group collapsable depth-0"><a href="./components.html" class="sidebar-heading clickable"><span>Components</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="./files.html" class="sidebar-link">Files</a></li><li><a href="./credits.html" class="sidebar-link">Credits</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="api"><a href="#api" class="header-anchor">#</a> API</h1> <p>There is available basic ExpressJS server with sample REST API. To launch it on your local machine you need to get into <code>soup-api</code> directory via terminal, install all node modules (<code>npm install</code>) and then run <code>npm dev</code> command.</p> <p>It contains all necessary endpoints to test the template. The API does not provide any database connections.</p> <p><strong>Note!</strong> The base URL for API connections is set at <code>API_URL</code> environment variable (<code>.env</code> file).</p> <p>Blow are listed all available endpoints with descriptions.</p> <h2 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h2> <h3 id="get-settings"><a href="#get-settings" class="header-anchor">#</a> <code>GET /settings</code></h3> <p>Returns base restaurant <a href="./data-models.html#settings">Settings</a>.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;address&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;street&quot;</span><span class="token operator">:</span> <span class="token string">&quot;St John 21/52&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;city&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Carcow&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;contry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Poland&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;phone&quot;</span><span class="token operator">:</span> <span class="token string">&quot;+48 432 543 666&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;email&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hello@example.com&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;USD&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;currencySymbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;deliveryAreas&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;zipCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;30-002&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;city&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Carcow - Old Town&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;deliveryCost&quot;</span><span class="token operator">:</span> <span class="token number">9</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;zipCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;30-007&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;city&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Carcow - Center&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;deliveryCost&quot;</span><span class="token operator">:</span> <span class="token number">5.5</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;deliveryTimeOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;As fast as possible&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;In one hour&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;In two hours&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;isOpen&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;minimumCartValue&quot;</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;openHours&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;days&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;openHour&quot;</span><span class="token operator">:</span> <span class="token string">&quot;12:00&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;closeHour&quot;</span><span class="token operator">:</span> <span class="token string">&quot;22:00&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;days&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;openHour&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8:00&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;closeHour&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20:00&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;days&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;openHour&quot;</span><span class="token operator">:</span> <span class="token string">&quot;12:00&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;closeHour&quot;</span><span class="token operator">:</span> <span class="token string">&quot;24:00&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;socialMedia&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;facebook&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;google&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;twitter&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;instagram&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;linkedin&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;menuDefaultView&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/menu-list-navigation&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;navigation&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Home&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Home Basic&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Home Video&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/index-video&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Home Slider&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/index-slider&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Home Burgers&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/index-burgers&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;About&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;dropdownImage&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/dropdown-about.jpg&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;About&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/about&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Services&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/services&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Gallery&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/gallery&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Reviews&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/reviews&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Menu&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;List&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Navigation&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/menu-list-navigation&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Collapse&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/menu-list-collapse&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Grid&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Navigation&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/menu-grid-navigation&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Collapse&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/menu-grid-collapse&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Offers&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/offers&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Contact&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/contact&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Other&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;dropdownImage&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/dropdown-more.jpg&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FAQ&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/faq&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Blog&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/blog&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;meta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Soup - NuxtJS Restaurant with Online Ordering System Template&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NuxtJS Restaurant with Online Ordering System Template&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;keywords&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NuxtJS, Online Ordering, Template, Restaurant&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="theme"><a href="#theme" class="header-anchor">#</a> Theme</h2> <h3 id="get-theme"><a href="#get-theme" class="header-anchor">#</a> <code>GET /theme</code></h3> <p>Returns base <a href="./data-models.html#theme">Theme</a> configuration.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;footerType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Basic&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;footerModules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;LOGO&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;LATEST_POSTS&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;NEWSLETTER&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;SOCIAL_MEDIA&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;footerLogo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/logo-light.svg&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;headerLogoLight&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/logo-light.svg&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;headerLogoDark&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/logo-dark.svg&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;headerLogoStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;VERTICAL&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;headerLogoBackground&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DARK&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;themeInverted&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;themeBodyPadded&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;themeColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ddae71&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="menu"><a href="#menu" class="header-anchor">#</a> Menu</h2> <h3 id="get-menu-categories"><a href="#get-menu-categories" class="header-anchor">#</a> <code>GET /menu/categories</code></h3> <p>Returns an array with <a href="./data-models.html#menucategory">MenuCategory</a> elements.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Burgers&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/menu-title-burgers.jpg&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Pizza&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/menu-title-pizza.jpg&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+</code></pre></div></details> <h3 id="get-menu-items"><a href="#get-menu-items" class="header-anchor">#</a> <code>GET /menu/items</code></h3> <p>Returns an array with <a href="./data-models.html#menuitem">MenuItem</a> elements.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;categoryId&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;American Classic&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/products/burger01.jpg&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Beef, Cheese, Potato, Onion, Fries&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Size&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Normal - 200g&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Double - 400g&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">4</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Meat&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Chicken&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Beef&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;additions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Prosciutto&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Chicken&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Champignon Mushroom&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">5</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Beef&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Salami&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Potato&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Paprika&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Broccoli&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Cheese&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Onion&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;categoryId&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Chicen Burger&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/products/burger02.jpg&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Chicken, Cheese, Potato, Onion, Fries&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Size&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Normal - 200g&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Double - 400g&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">4</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;additions&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;categoryId&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Angus Burger&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/products/burger03.jpg&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Angues Beef, Pickles, Potato, Onion, Fries&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;additions&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div></details> <h3 id="get-menu-offers"><a href="#get-menu-offers" class="header-anchor">#</a> <code>GET /menu/offers</code></h3> <p>Returns an array with <a href="./data-models.html#menuoffer">MenuOffer</a> items.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Free Small Pizza&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Get free small pizza orders higher that $40!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FREE_PRODUCT&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;freeProductId&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;conditions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Only on Weekends&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DAY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Order higher than $40&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MINIMUM_ORDER_VALUE&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">40</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Unless one Pizza in a cart&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CATEGORY_ID&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/special-pizza.jpg&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Chip Friday&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10% Off for all dishes!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DISCOUNT&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;discountValue&quot;</span><span class="token operator">:</span> <span class="token number">0.1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;conditions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Only on Friday&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DAY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;All products&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CATEGORY_ID&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/special-dish.jpg&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div></details> <h2 id="checkout"><a href="#checkout" class="header-anchor">#</a> Checkout</h2> <h3 id="post-checkout-order"><a href="#post-checkout-order" class="header-anchor">#</a> <code>POST /checkout/order</code></h3> <p>Posts <a href="./data-models.html#order">Order</a> object and returns <a href="./data-models.html#orderresponse">OrderResponse</a> object.</p> <details><summary>Sample body</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;deliveryArea&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;zipCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;30-002&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;city&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Carcow - Old Town&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;deliveryCost&quot;</span><span class="token operator">:</span> <span class="token number">9</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;deliveryTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;12:00&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;paymentMethod&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CASH&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Piotr&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;orderType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;DELIVERY&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;street&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Zx63&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;phone&quot;</span><span class="token operator">:</span> <span class="token string">&quot;514219823&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;email&quot;</span><span class="token operator">:</span> <span class="token string">&quot;piotr.osmola@gmail.com&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;activeOffersIds&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;discountCoupon&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;WEED_23&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Somkers Discount&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">0.2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;We are processing it right now - your will receive it about 45 minutes...&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h3 id="post-checkout-discount-code"><a href="#post-checkout-discount-code" class="header-anchor">#</a> <code>POST /checkout/discount/{code}</code></h3> <p>Posts discount <code>{code}</code> to verification and returns <a href="./data-models.html#discount">Discount</a> object.</p> <p>There are two demo codes <code>WEED_24</code> &amp; <code>FITT</code>.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;WEED_23&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Somkers Discount&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">0.2</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="pages"><a href="#pages" class="header-anchor">#</a> Pages</h2> <h3 id="get-page-route"><a href="#get-page-route" class="header-anchor">#</a> <code>GET /page/{route}</code></h3> <p>Returns <a href="./data-models.html#pagedefault">PageDefault</a> object where <code>{route}</code> matches exact website route path (ex. <code>/page/about</code>).</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;pageTitle&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;About Us&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;theme&quot;</span><span class="token operator">:</span> <span class="token string">&quot;light&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;tagline&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Some informations about our restaurant&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;sections&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ImageEdge&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;props&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;rate&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;The best food in London!&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;descriptionLead&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Nam eleifend elementum sapien et bibendum. Nunc ac diam efficitur, ultrices lorem quis, consectetur odio. Nullam vulputate, eros quis accumsan cursus, elit lectus bibendum nulla, sed dapibus ligula tellus at purus. Fusce id eros id mi cursus semper. Quisque efficitur bibendum nunc a consectetur. Maecenas vitae quam iaculis, scelerisque purus nec, varius purus. Nullam eget varius elit. Donec eget facilisis nunc, non rutrum lorem.&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Mark Johnson, Chef&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;sign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/svg/sign.svg&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/bg-chef.jpg&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;reverse&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;CtaAlternative&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;props&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;image&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Image Title&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/photos/bg-croissant.jpg&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Check our promo video!&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tagline&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Book a table even right now or make an online order!&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;modalVideo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://www.youtube.com/embed/uVju5--RqtY&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;bg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;theme&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h3 id="get-page-faq"><a href="#get-page-faq" class="header-anchor">#</a> <code>GET /page/faq</code></h3> <p>Returns <a href="./data-models.html#pageFaq">PageFaq</a> object.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;pageTitle&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FAQ&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;theme&quot;</span><span class="token operator">:</span> <span class="token string">&quot;light&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;tagline&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Some informations about our restaurant&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;categories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;General&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;questions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;How to make an order?&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Donec rutrum turpis justo, vel condimentum neque fringilla vel. Nam feugiat at lacus eu egestas. Suspendisse nibh sem, blandit sed elit at, dictum accumsan elit. Sed eu orci risus. Suspendisse ante nisi, vestibulum suscipit sagittis ut, elementum id quam. Aliquam eget ullamcorper odio.&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Is the order process safe for customers?&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Donec rutrum turpis justo, vel condimentum neque fringilla vel. Nam feugiat at lacus eu egestas. Suspendisse nibh sem, blandit sed elit at, dictum accumsan elit. Sed eu orci risus. Suspendisse ante nisi, vestibulum suscipit sagittis ut, elementum id quam. Aliquam eget ullamcorper odio.&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h2 id="blog"><a href="#blog" class="header-anchor">#</a> Blog</h2> <h3 id="get-blog-route"><a href="#get-blog-route" class="header-anchor">#</a> <code>GET /blog/{route}</code></h3> <p>Returns array with <a href="./data-models.html#blogpost">BlogPost</a> elements.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;How to create effective webdeisign?&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;shortDescription&quot;</span><span class="token operator">:</span> <span class="token string">&quot;In hac habitasse platea dictumst. Curabitur vestibulum nulla non efficitur pulvinar.&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;p class=\&quot;lead\&quot;&gt;In hac habitasse platea dictumst. Curabitur vestibulum nulla non efficitur pulvinar. Nulla pulvinar est in eros vehicula lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p&gt;&lt;p&gt;Aenean rutrum dapibus molestie. Praesent eu nibh a magna maximus semper. Aliquam odio nulla, ornare et imperdiet dignissim, rutrum et felis. Nulla in eros et magna vehicula tincidunt quis eget orci. Quisque in est ac augue bibendum fringilla quis a odio. Donec mollis consectetur commodo. Cras interdum ac nibh id sodales. Phasellus egestas varius pulvinar. Aliquam sit amet felis sit amet purus vestibulum dictum in sit amet justo. Nam blandit arcu porttitor, faucibus purus a, vehicula odio. Pellentesque semper, odio sed commodo iaculis, augue mauris scelerisque mi, in mattis elit justo ut erat. Nulla cursus turpis sollicitudin, eleifend lectus non, tristique nunc. Fusce vitae varius tellus.&lt;/p&gt;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;media&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post01.jpg&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;md&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post01.jpg&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post01_lg.jpg&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;createdAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-07-14T11:12:18+0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Johnatan Doe&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Awesome weekend in Polish mountains!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;shortDescription&quot;</span><span class="token operator">:</span> <span class="token string">&quot;In hac habitasse platea dictumst. Curabitur vestibulum nulla non efficitur pulvinar.&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;p class=\&quot;lead\&quot;&gt;In hac habitasse platea dictumst. Curabitur vestibulum nulla non efficitur pulvinar. Nulla pulvinar est in eros vehicula lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p&gt;&lt;p&gt;Aenean rutrum dapibus molestie. Praesent eu nibh a magna maximus semper. Aliquam odio nulla, ornare et imperdiet dignissim, rutrum et felis. Nulla in eros et magna vehicula tincidunt quis eget orci. Quisque in est ac augue bibendum fringilla quis a odio. Donec mollis consectetur commodo. Cras interdum ac nibh id sodales. Phasellus egestas varius pulvinar. Aliquam sit amet felis sit amet purus vestibulum dictum in sit amet justo. Nam blandit arcu porttitor, faucibus purus a, vehicula odio. Pellentesque semper, odio sed commodo iaculis, augue mauris scelerisque mi, in mattis elit justo ut erat. Nulla cursus turpis sollicitudin, eleifend lectus non, tristique nunc. Fusce vitae varius tellus.&lt;/p&gt;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;media&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post02.jpg&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;md&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post02.jpg&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post02_lg.jpg&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;createdAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-08-12T11:12:18+0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Johnatan Doe&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div></details> <h3 id="get-blog-id"><a href="#get-blog-id" class="header-anchor">#</a> <code>GET /blog/{id}</code></h3> <p>Returns <a href="./data-models.html#blogpost">BlogPost</a> element by ID.</p> <details><summary>Sample response</summary> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;How to create effective webdeisign?&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;shortDescription&quot;</span><span class="token operator">:</span> <span class="token string">&quot;In hac habitasse platea dictumst. Curabitur vestibulum nulla non efficitur pulvinar.&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;p class=\&quot;lead\&quot;&gt;In hac habitasse platea dictumst. Curabitur vestibulum nulla non efficitur pulvinar. Nulla pulvinar est in eros vehicula lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p&gt;&lt;p&gt;Aenean rutrum dapibus molestie. Praesent eu nibh a magna maximus semper. Aliquam odio nulla, ornare et imperdiet dignissim, rutrum et felis. Nulla in eros et magna vehicula tincidunt quis eget orci. Quisque in est ac augue bibendum fringilla quis a odio. Donec mollis consectetur commodo. Cras interdum ac nibh id sodales. Phasellus egestas varius pulvinar. Aliquam sit amet felis sit amet purus vestibulum dictum in sit amet justo. Nam blandit arcu porttitor, faucibus purus a, vehicula odio. Pellentesque semper, odio sed commodo iaculis, augue mauris scelerisque mi, in mattis elit justo ut erat. Nulla cursus turpis sollicitudin, eleifend lectus non, tristique nunc. Fusce vitae varius tellus.&lt;/p&gt;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;media&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post01.jpg&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;md&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post01.jpg&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;lg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://assets.suelo.pl/soup/img/posts/post01_lg.jpg&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;createdAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-07-14T11:12:18+0000&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Johnatan Doe&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="./configuration.html" class="prev">
+        Configuration
+      </a></span> <span class="next"><a href="./data-models.html">
+        Data Models
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src=./assets/js/app.7351abcf.js defer></script><script src=./assets/js/41.39bc712c.js defer></script><script src=./assets/js/82.4a6b2af2.js defer></script>
+  </body>
+</html>

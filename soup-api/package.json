@@ -1,0 +1,23 @@
+{
+  "name": "soup-api",
+  "version": "1.0.0",
+  "description": "Rižoto Template Demo API",
+  "author": "Suelo",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --inspect app.js -p 4000",
+    "start": "node app.js -p 8080"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "moment": "^2.27.0",
+    "nodemon": "^2.0.4",
+    "yargs": "^15.4.1"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}

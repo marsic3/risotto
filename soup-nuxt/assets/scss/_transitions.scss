@@ -1,0 +1,73 @@
+/* ---------------------------------------------------------------------------- */
+/* --- TRANSITIONS
+/* ----------------------------------------------------------------------------- */
+
+// Route
+.route-enter-active, .route-leave-active {
+    transition: opacity .3s;
+}
+
+.route-enter, .route-leave-to {
+    opacity: 0;
+}
+
+// Fade
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+/* Fade Up */
+.fade-up-enter-active, .fade-up-leave-active {
+    transition: opacity .3s, transform .3s;
+}
+
+.fade-up-enter, .fade-up-leave-to {
+    opacity: 0;
+    transform: translate3d(0,-10%,0);
+}
+
+/* Slide Up */
+.slide-up-enter-active, .slide-up-leave-active {
+    transition: transform .3s ease-out;
+}
+
+.slide-up-enter, .slide-up-leave-to {
+    transform: translate3d(0, 100%, 0);
+}
+
+/* Slide Right */
+.slide-right-enter-active, .slide-right-leave-active {
+    transition: transform .3s ease-out;
+}
+
+.slide-right-enter, .slide-right-leave-to {
+    transform: translate3d(-100%, 0, 0);
+}
+
+/* Slide Left */
+.slide-left-enter-active, .slide-right-enter {
+    transition: transform .3s ease-out;
+}
+
+.slide-left-enter, .slide-left-leave-to {
+    transform: translate3d(100%, 0, 0);
+}
+
+/* View Slide Left */
+.view-slide-left-enter-active ,.view-slide-left-leave-active, .view-slide-right-enter-active, .view-slide-right-leave-active {
+	transition: all .2s ease-out;
+}
+
+.view-slide-left-enter, .view-slide-right-leave-to {
+	transform: translate3d(10%,0,0);
+	opacity: 0;
+}
+
+.view-slide-left-leave-to, .view-slide-right-enter {
+	transform: translate3d(-10%,0,0);
+	opacity: 0;
+}

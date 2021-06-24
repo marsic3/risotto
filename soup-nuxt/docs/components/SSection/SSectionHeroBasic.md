@@ -1,0 +1,47 @@
+# SSectionHeroBasic
+
+> Basic hero section with synchronized images and descriptions
+
+## Props
+
+| Prop name | Description                     | Type   | Values                                                                                                                          | Default       |
+| --------- | ------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| bg        | Section's background color      | string | `primary`, `primary-light`, `primary-dark`, `secondary`, `info`, `warning`, `danger`, `success`, `dark`, `light`, `transparent` | 'transparent' |
+| theme     | Section's color scheme          | string | `light`, `dark`, `inverted`                                                                                                     | 'default'     |
+| slides    | Slides to display in the slider | array  | -                                                                                                                               |               |
+
+---
+
+This is recommended data structure for `slides` prop.
+
+```json
+[
+  {
+    "type": "PRODUCT",
+    "image": "http://assets.suelo.pl/soup/img/photos/slider-pasta.jpg",
+    "productId": 14,
+    "title": "Boscaiola Pasta",
+    "tagline": "New product!"
+  },
+  {
+    "type": "BASIC",
+    "image": "http://assets.suelo.pl/soup/img/photos/slider-burger.jpg",
+    "title": "Get 10% off coupon",
+    "tagline": "and use it with your next order!",
+    "link": {
+      "title": "Check our offers",
+      "slug": "/offers"
+    }
+  },
+  {
+    "type": "BASIC",
+    "image": "http://assets.suelo.pl/soup/img/photos/slider-dessert.jpg",
+    "title": "Delicious Desserts",
+    "tagline": "Order it online even now!",
+    "link": {
+      "title": "Check our menu",
+      "slug": "/menu-list-navigation"
+    }
+  }
+]
+```
